@@ -2,7 +2,7 @@
     <div class="col-md-6 m-auto">
         <div class="card card-body">
             <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i>Register</h1>
-            
+            <% include  ./partials/messages %>
             <form action="/users/register" method="POST">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -10,7 +10,7 @@
                     type="name"
                     id="name"
                     name="name"
-                    class="form-control"
+                    class="form-control" 
                     placeholder="Enter Name"
                     value="<%= typeof name != 'undefined' ? name: '' %>"
                     />
@@ -48,7 +48,7 @@
                     value="<%= typeof password2 != 'undefined' ? password2: '' %>"
                     />
                 </div>
-                <div type="submit" class="btn btn-primary btn-block">Login</div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
             <p class="lead mt-4">Have an Account! <a href="/users/Login">Login</a></p>
         </div>

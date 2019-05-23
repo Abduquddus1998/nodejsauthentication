@@ -17,9 +17,12 @@ mogoose.connect(db, {useNewUrlParser: true})
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+//Body Parser
+app.use(express.urlencoded({extended : false}));
+
 //Routes
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/index'));
+app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 5000;
  
